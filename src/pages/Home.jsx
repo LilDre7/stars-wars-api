@@ -27,7 +27,7 @@ const Home = () => {
       fetchData(categoryParam);
     } else {
       // Redirigir a una categoría predeterminada o mostrar mensaje
-      navigate("/home?category");
+      navigate("/home?category=edit");
     }
   }, [location.search, navigate]);
 

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import man from "../assets/man.jpg";
 import woman from "../assets/woman.jpg";
 import robot from "../assets/robot.jpg";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const EditCreate = () => {
   const [elementos, setElementos] = useState([]);
@@ -33,7 +35,7 @@ const EditCreate = () => {
   const agregarElemento = () => {
     // Check if both name and description are provided
     if (!nombre || !descripcion || !genere) {
-      alert("Por favor, ingresa un nombre y una descripción.");
+      toast.error("Por favor, ingresa un nombre, descripción y género.");
       return;
     }
 
@@ -55,9 +57,11 @@ const EditCreate = () => {
         )
       );
       setElementoEditando(null); // Clear editing state
+      toast.success("Elemento actualizado correctamente.");
     } else {
       // Add the new element to the list
       setElementos([...elementos, nuevoElemento]);
+      toast.success("Elemento agregado correctamente.");
     }
 
     // Reset input fields and close the modal
@@ -80,10 +84,21 @@ const EditCreate = () => {
     const confirmacion = window.confirm(
       "¿Estás seguro de que quieres eliminar este elemento?"
     );
+
+    if (!confirmacion) {
+      toast.warning("Operación cancelada.", {
+        position: "top-center",
+      });
+    }
     if (confirmacion && elementos.length > 1) {
       setElementos(elementos.filter((elem) => elem.id !== id));
+      toast.success("Elemento eliminado correctamente.", {
+        position: "top-center",
+      });
     } else if (elementos.length === 1) {
-      alert("Debe haber al menos un elemento en la lista.");
+      toast.error("Debe haber al menos un elemento en la lista.", {
+        position: "top-center",
+      });
     }
   };
 
@@ -293,6 +308,9 @@ const EditCreate = () => {
           )}
         </div>
       </div>
+
+      {/* Toast container for notifications */}
+      <ToastContainer />
     </div>
   );
 };
