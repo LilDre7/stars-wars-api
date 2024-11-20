@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Usamos React Router para la navegación
-import { Search, Menu, X, User } from "lucide-react";
+import { Search, X, User, LayoutGrid } from "lucide-react";
 import { socialMedia, login, categories } from "../services/data";
 import logo from "../assets/logo.png";
 
@@ -8,7 +8,6 @@ const Navbar = () => {
   const navigate = useNavigate(); // Creamos el hook de navegación
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [category, setCategory] = useState(""); // Estado para la categoría seleccionada
-  const [search, setSearch] = useState(""); // Estado para el valor de búsqueda
 
   // Función para obtener los datos según la categoría seleccionada
   const handleCategoryClick = async (category) => {
@@ -27,14 +26,20 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={item.href}
+                target="_blank"
                 className="text-white hover:text-red-500 text-sm font-bold hover:scale-125 transition-all"
               >
                 <span className="w-6">{item.icon}</span>
               </Link>
             ))}
-            <button className="text-white text-sm bg-transparent border-gray-600 hover:bg-red-500 hover:border-White border px-3 py-1 rounded-sm">
+            <a
+              href="https://alvaro-website.vercel.app/"
+              target="_blank"
+              type="button"
+              className="text-white text-sm bg-transparent border-gray-600 hover:bg-red-500 hover:border-White border px-3 py-1 rounded-sm"
+            >
               CONTACT
-            </button>
+            </a>
           </div>
 
           {/* Search navbar */}
@@ -43,10 +48,8 @@ const Navbar = () => {
               <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
               <input
                 type="text"
-                placeholder={`Buscador ${category ? category : ""}...`}
+                placeholder={`Buscador ...`}
                 className="w-48 pl-8 h-8 border rounded-sm text-white bg-transparent border-gray-700 text-sm focus:ring-1 focus:ring-gray-700"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
 
@@ -75,7 +78,7 @@ const Navbar = () => {
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <LayoutGrid className="h-6 w-6" />
               )}
             </button>
           </div>
@@ -83,8 +86,8 @@ const Navbar = () => {
 
         {/* logo navbar */}
         <section className="flex items-center justify-center py-4">
-          <Link to="/" className="">
-            <img src={logo} alt="Star Wars" className="h-32 md:h-32" />
+          <Link to="/" className="pb-4">
+            <img src={logo} alt="Star Wars" className="h-24 md:h-24" />
           </Link>
         </section>
 
@@ -93,7 +96,7 @@ const Navbar = () => {
           className={`${isMenuOpen ? "block" : "hidden"} md:block pb-4 text-sm`}
         >
           {/* Botones por categoría */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 border-t-2 border-gray-800">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 border-t-2 border-gray-800 md:border-t-0 ">
             {categories.map(({ label, category }) => (
               <button
                 key={category}
@@ -104,8 +107,7 @@ const Navbar = () => {
               </button>
             ))}
           </div>
-
-          <div className="sm:border-t-2 border-gray-800 mt-6">
+          <div className="sm:border-t-2 border-double border-gray-800 mt-6">
             <p className="text-white text-base mt-4 text-center">
               WELCOME TO THE STAR WARS API 🚀
             </p>

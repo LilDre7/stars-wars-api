@@ -76,6 +76,8 @@ export const fetchVehicles = async () => {
   }));
 };
 
+// Funcion para mis propias cartas la cual creo de manera local
+
 export const categoryMap = {
   characters: fetchCharacters,
   planets: fetchPlanets,

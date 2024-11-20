@@ -7,7 +7,12 @@ import LandingPage from "./pages/Landing";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
+    >
       {/* The routes of the application */}
       <Routes>
         {/* The landing page */}

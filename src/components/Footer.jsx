@@ -30,14 +30,14 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {socialMedia.map((item, index) => (
-            <Link
+            <a
+              key={index}
               href={item.href}
               target="_blank"
-              key={index}
-              className="text-lg hover:text-zinc-400 transition-colors"
+              className="text-lg hover:text-red-500 transition-all hover:scale-110"
             >
               {item.icon}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="space-y-2">
             <Link
               href="mailto:hello@goodkidsagency.com"
-              className="hover:text-zinc-400 transition-colors block"
+              className="hover:text-red-500 transition-all hover:scale-110 block"
             >
               alvaroaburto71@gmail.com
             </Link>

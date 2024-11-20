@@ -98,7 +98,7 @@ El objetivo de esta prueba es evaluar tus habilidades como desarrollador Fronten
   - `EditCreate.jsx`
     Página para edición/creación de elementos.
 
-### Lógica de Conexión con la API
+### Lógica de Conexión con la 
 
 - `services/`
   Carpeta que contiene la lógica de conexión con la API.

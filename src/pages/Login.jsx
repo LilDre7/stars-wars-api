@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { buttonlogin } from "../services/data";
 import { Eye } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true); // Para alternar entre login y registro
@@ -81,8 +82,8 @@ const Login = () => {
         className="md:w-1/2 flex flex-col justify-center items-center   p-6 
       md:p-12 min-h-screen bg-home bg-cover opacity-90 text-black font-bold"
       >
-        <div className="mx-auto">
-          <img className="w-44" src="./src/assets/logo.png" alt="" />
+        <div className="mx-auto mb-5">
+          <img className="w-44" src={logo} alt="" />
         </div>
         {/* Form Section */}
         <section className="w-full max-w-xs p-6 space-y-4 bg-white rounded-lg shadow-md">
@@ -97,7 +98,7 @@ const Login = () => {
               <input
                 type="email"
                 id="email"
-                className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-black placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-black placeholder-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="alvaroaburto71@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -112,7 +113,7 @@ const Login = () => {
                 <input
                   type="password"
                   id="password"
-                  className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-black placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 bg-transparent border border-gray-600 rounded-lg text-black placeholder-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Password (6+ characters)"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -159,7 +160,7 @@ const Login = () => {
               ))
             }
           </div>
-          <div className="text-center mt-5 text-xs text-gray-500">
+          <div className="text-center mt-5 text-xs text-black font-medium">
             {isLogin ? "Don't have an account? " : "Already have an account? "}
             <button
               className="text-blue-400 text-sm hover:underline focus:outline-none"
