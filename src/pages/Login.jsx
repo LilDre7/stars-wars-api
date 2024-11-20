@@ -36,7 +36,7 @@ const Login = () => {
 
       if (validateEmail() && validatePassword()) {
         try {
-          const user = JSON.parse(localStorage.getItem("user"));
+          const user = JSON.parse(localStorage.getItem("user")) || [];
           if (isLogin) {
             if (user && user.email === email && user.password === password) {
               localStorage.setItem("isAuthenticated", true); // Marcar como autenticado
@@ -50,7 +50,7 @@ const Login = () => {
           } else {
             // Registro: Guardar el nuevo usuario en localStorage
             const newUser = { email, password };
-            localStorage.setItem("user", JSON.stringify(newUser));
+            localStorage.setItem("user", JSON.stringify(newUser)) || [];
             navigate("/"); // Redirigir a Home después de registrar
           }
         } catch (error) {

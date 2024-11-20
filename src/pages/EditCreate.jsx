@@ -11,7 +11,7 @@ const EditCreate = () => {
 
   // Cargar elementos desde el localStorage al montar el componente
   useEffect(() => {
-    const elementosStorage = localStorage.getItem(key);
+    const elementosStorage = localStorage.getItem(key || null);
     if (elementosStorage) {
       setElementos(JSON.parse(elementosStorage));
     }
@@ -20,7 +20,7 @@ const EditCreate = () => {
   // Guardar los elementos en el localStorage cada vez que se actualiza la lista
   useEffect(() => {
     if (elementos.length > 0) {
-      localStorage.setItem(key, JSON.stringify(elementos));
+      localStorage.setItem(key, JSON.stringify(elementos)) || [];
     }
   }, [elementos]);
 
