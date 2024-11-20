@@ -64,6 +64,7 @@ const Home = () => {
     <main>
       <Navbar />
 
+      {/* Botones para seleccionar categoría, visibles solo en dispositivos móviles */}
       <div className="grid grid-cols-2 gap-4 py-6 px-4 m-4 md:hidden">
         {categories.map(({ label, category }) => (
           <button
@@ -78,13 +79,14 @@ const Home = () => {
       </div>
 
       {category === "edit" ? (
-        // Solo se muestra EditCreate si la categoría es 'edit'
+        // Renderizar el componente de edición solo si la categoría es 'edit'
         <EditCreate />
       ) : (
         <section className="max-w-[1000px] mx-auto my-10">
           {/* Mostrar contenido principal solo si la categoría no es 'edit' */}
           {category && (
             <div className="px-4 mb-4">
+              {/* Campo de búsqueda para filtrar elementos por categoría seleccionada */}
               <input
                 type="text"
                 placeholder={`Buscar ${category}...`}
@@ -98,6 +100,7 @@ const Home = () => {
           {category && (
             <div>
               <div className="relative py-4 px-6 text-white my-4">
+                {/* Título que indica la categoría de los datos mostrados */}
                 <h2 className="text-xl font-bold tracking-tight bg-gradient-to-r from-black via-gray-200 to-red-500 text-transparent bg-clip-text uppercase">
                   Mostrando datos de {category}
                 </h2>
@@ -105,10 +108,12 @@ const Home = () => {
               </div>
 
               {loading ? (
+                // Mensaje de carga mientras se obtienen los datos
                 <div className="text-center m-4">Cargando...</div>
               ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-5 sm:m-0">
                   {filteredData.length > 0 ? (
+                    // Mostrar tarjetas con los datos filtrados
                     filteredData.map((item, index) => (
                       <Card
                         key={index}
@@ -119,6 +124,7 @@ const Home = () => {
                       />
                     ))
                   ) : (
+                    // Mensaje si no se encuentran elementos
                     <div>No se encontraron elementos.</div>
                   )}
                 </div>

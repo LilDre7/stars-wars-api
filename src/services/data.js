@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import React from "react";
 
+// Informacion de mis redes sociales
 const socialMedia = [
   {
     icon: React.createElement(Linkedin),
@@ -26,6 +27,7 @@ const socialMedia = [
   },
 ];
 
+// Informacion de login
 const login = [
   {
     name: "Login",
@@ -33,6 +35,7 @@ const login = [
   },
 ];
 
+// Informacion las categorias del API
 const categories = [
   { label: "Characters", category: "characters" },
   { label: "Planets", category: "planets" },
@@ -43,6 +46,7 @@ const categories = [
   { label: "EDIT", category: "edit" },
 ];
 
+// Informacion de botones
 const buttonlogin = [
   {
     name: "Continue with Google",
