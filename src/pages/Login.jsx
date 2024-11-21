@@ -81,14 +81,14 @@ const Login = () => {
       <div className="min-h-screen md:w-1/2 bg-login bg-cover opacity-90 text-black font-bold flex-col justify-center items-center p-6 md:p-12 hidden md:flex"></div>
 
       {/* Sección derecha - Contenido principal */}
-      <div className="md:w-1/2 flex flex-col justify-center items-center p-6 md:p-12 min-h-screen bg-home bg-cover opacity-90 text-black font-bold">
+      <div className="md:w-1/2 flex flex-col justify-center py-16 items-center p-6 md:p-12 min-h-screen bg-home bg-cover opacity-90 text-black font-bold">
         {/* Logo en la parte superior */}
-        <a href="/" className="mx-auto mb-5">
+        <a href="/" className="mx-auto mb-8">
           <img className="w-44" src={logo} alt="" />
         </a>
 
         {/* Sección del formulario */}
-        <section className="w-full max-w-xs p-6 space-y-4 bg-white rounded-lg shadow-md">
+        <section className="mb-20 w-full max-w-xs p-6 space-y-4 bg-white rounded-lg shadow-md">
           {/* Título del formulario */}
           <h2 className="text-center text-lg font-semibold text-black mb-4">
             {isLogin ? "Log in to continue" : "Sign up to get started"}
