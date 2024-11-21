@@ -6,6 +6,10 @@ import {
   UserIcon,
 } from "lucide-react";
 import React from "react";
+import slide1 from "../assets/slide4.webp";
+import slide2 from "../assets/slide2.webp";
+import slide3 from "../assets/slide3.webp";
+import slide4 from "../assets/slide1.webp";
 
 // Informacion de mis redes sociales
 const socialMedia = [
@@ -62,4 +66,12 @@ const buttonlogin = [
   },
 ];
 
-export { socialMedia, login, categories, buttonlogin };
+// Informacion del slider
+const slides = [
+  { id: 1, imageUrl: slide1 },
+  { id: 2, imageUrl: slide2 },
+  { id: 3, imageUrl: slide3 },
+  { id: 4, imageUrl: slide4 },
+];
+
+export { socialMedia, login, categories, buttonlogin , slides};

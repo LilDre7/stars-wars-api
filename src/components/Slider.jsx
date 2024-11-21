@@ -3,20 +3,10 @@ import "swiper/css"; // Estilos básicos
 import "swiper/css/navigation"; // Estilos de navegación
 import "swiper/css/pagination"; // Estilos de paginación
 import "swiper/css/autoplay";
-import slide1 from "../assets/slide4.jpg";
-import slide2 from "../assets/slide2.webp";
-import slide3 from "../assets/slide3.webp";
-import slide4 from "../assets/slide1.webp";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { slides } from "../services/data";
 
 const Slider = () => {
-  const slides = [
-    { id: 1, imageUrl: slide1 },
-    { id: 2, imageUrl: slide2 },
-    { id: 3, imageUrl: slide3 },
-    { id: 4, imageUrl: slide4 },
-  ];
-
   return (
     <section className="">
       <div className="bg-bg-slider absolute w-full h-full z-[-1] opacity-40 "></div>

@@ -7,10 +7,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'home': "url('../src/assets/home.jpg')",
+        'home': "url('../src/assets/home.webp')",
         'logo': "url('../src/assets/logo.png')",
-        'login': "url('../src/assets/login.jpg')",
-        'space': "url('../src/assets/space.png')",
+        'login': "url('../src/assets/login.webp')",
         '404': "url('../src/assets/404.jpg')",
         'bg-slider': "url('../src/assets/bg-slider.jpg')",
       }

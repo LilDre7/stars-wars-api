@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import man from "../assets/man.jpg";
-import woman from "../assets/woman.jpg";
-import robot from "../assets/robot.jpg";
+import man from "../assets/man.webp";
+import woman from "../assets/woman.webp";
+import robot from "../assets/robot.webp";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -244,7 +244,7 @@ const EditCreate = () => {
                   className="relative bg-gradient-to-b hover:scale-95 from-neutral-800 to-black overflow-hidden group hover:ring-1 hover:ring-white/20 transition-all flex sm:flex-col rounded-lg my-4"
                 >
                   {/* Contenedor de la imagen principal y información */}
-                  <div className="relative aspect-[5/3]">
+                  <div className="relative aspect-[5/5]">
                     {/* Imagen principal */}
                     <img
                       className="object-cover w-full h-full"
@@ -271,10 +271,10 @@ const EditCreate = () => {
 
                       {/* Información del elemento */}
                       <div className="mt-auto absolute">
-                        <h3 className="font-semibold text-xl text-white group-hover:text-blue-400 transition-all line-clamp-2">
+                        <h3 className="text-lg font-semibold text-white underline">
                           {elemento.nombre}
                         </h3>
-                        <p className="text-sm text-gray-300 mt-2 line-clamp-3">
+                        <p className="text-sm text-white mt-2 line-clamp-3">
                           {elemento.descripcion}
                         </p>
                         <p className="text-sm text-gray-300 mt-2 line-clamp-3">
