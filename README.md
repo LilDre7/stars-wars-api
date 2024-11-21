@@ -175,4 +175,3 @@ El objetivo de esta prueba es evaluar tus habilidades como desarrollador Fronten
 
 Si tienes alguna duda durante la realización de la prueba, no dudes en comunicarte. ¡Buena suerte!
 
-/**\*\*** 74cae6ae-9e1e-4597-9455-419b24268e70 **\*\*\***/
