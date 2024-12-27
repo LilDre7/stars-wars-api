@@ -1,11 +1,12 @@
 import axios from "axios";
 
-const API_URL_people = "https://swapi.py4e.com/api//people/";
-const API_URL_planets = "https://swapi.dev/api/planets/";
-const API_URL_species = "https://swapi.dev/api/species/";
-const API_URL_films = "https://swapi.dev/api/films/";
-const API_URL_starships = "https://swapi.dev/api/starships/";
-const API_URL_vehicles = "https://swapi.dev/api/vehicles/";
+// const API_URL_BASE = "https://swapi.py4e.com/api/";
+const API_URL_people = "https://swapi.py4e.com/api/people/";
+const API_URL_planets = "https://swapi.py4e.com/api/planets/";
+const API_URL_species = "https://swapi.py4e.com/api/species/";
+const API_URL_films = "https://swapi.py4e.com/api/films/";
+const API_URL_starships = "https://swapi.py4e.com/api/starships/";
+const API_URL_vehicles = "https://swapi.py4e.com/api/vehicles/";
 
 // characters
 export const fetchCharacters = async () => {
