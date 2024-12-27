@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// const API_URL = "https://swapi.dev/api/";
-const API_URL_people = "https://swapi.dev/api/people/";
+const API_URL_people = "https://swapi.py4e.com/api//people/";
 const API_URL_planets = "https://swapi.dev/api/planets/";
 const API_URL_species = "https://swapi.dev/api/species/";
 const API_URL_films = "https://swapi.dev/api/films/";
