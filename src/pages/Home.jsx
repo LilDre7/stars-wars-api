@@ -33,7 +33,7 @@ const Home = () => {
 
   // Función para obtener los datos según la categoría seleccionada
   const fetchData = async (category) => {
-    if (category === setCategory) return; // Evitar llamadas innecesarias
+    if (category === setCategory) return;
     setLoading(true);
     try {
       const fetchFunction = categoryMap[category];
