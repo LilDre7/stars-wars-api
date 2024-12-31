@@ -1,4 +1,4 @@
-import notFound from "../assets/404.jpg";
+import notFoundImage from "../assets/man.webp";
 
 import PropTypes from "prop-types";
 
@@ -10,7 +10,7 @@ Card.propTypes = {
 };
 
 export default function Card({ name, image, gender, opening_crawl }) {
-  const hasImage = image ? image : notFound;
+  const hasImage = image ? image : notFoundImage;
 
   return (
     <div className="relative bg-gradient-to-b hover:scale-95 from-neutral-800 to-black  overflow-hidden group hover:ring-1 hover:ring-white/20 transition-all flex sm:flex-col">
