@@ -10,15 +10,13 @@ Card.propTypes = {
 };
 
 export default function Card({ name, image, gender, opening_crawl }) {
-  const hasImage = image ? image : notFoundImage;
-
   return (
     <div className="relative bg-gradient-to-b hover:scale-95 from-neutral-800 to-black  overflow-hidden group hover:ring-1 hover:ring-white/20 transition-all flex sm:flex-col">
       {/* Contenedor de la imagen */}
       <div className="relative aspect-[5/3]">
         {/* Imagen con la capacidad de escalar al hacer hover */}
         <img
-          src={hasImage}
+          src={image || notFoundImage}
           className="group-hover:scale-15 transition-transform duration-300"
           alt="Imagen no encontrada"
         />
