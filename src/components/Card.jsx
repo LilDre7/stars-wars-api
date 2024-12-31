@@ -18,7 +18,7 @@ export default function Card({ name, image, gender, opening_crawl }) {
         <img
           src={image || notFoundImage}
           className="group-hover:scale-15 transition-transform duration-300"
-          alt="Imagen no encontrada"
+          alt="Imagen representativa"
         />
         {/* Degradado de fondo para darle un efecto de profundidad */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60" />
